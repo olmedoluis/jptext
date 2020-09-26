@@ -1,4 +1,5 @@
 import React from "react";
+import { SelectInput } from "../SelectInput/SelectInput.component";
 import "./FilesViewer.styles.css";
 
 export const FilesViewer = ({ convertedText, file }) => {
@@ -10,7 +11,7 @@ export const FilesViewer = ({ convertedText, file }) => {
   return (
     <div className="files-viewer--wrapper">
       <div className="files-viewer__content files-viewer__text-input--wrapper">
-        <select></select>
+        <SelectInput />
         <textarea
           className="files-viewer__text-input"
           value={convertedText}
