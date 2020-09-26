@@ -2,6 +2,7 @@ import React, { useCallback, useState } from "react";
 import { createWorker } from "tesseract.js";
 import "./App.css";
 import { FileUploader } from "./components/FileUploader/FileUploader.component";
+import { FilesViewer } from "./components/FilesViewer/FilesViewer.component";
 
 function App() {
   const [status, setStatus] = useState("");
@@ -33,6 +34,8 @@ function App() {
       <FileUploader
         onChange={(files) => files.forEach((file) => readImage(file))}
       />
+
+      <FilesViewer />
 
       <p>{convertedText}</p>
       <p>{status}</p>
