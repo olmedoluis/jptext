@@ -40,7 +40,6 @@ function App() {
 
       <FilesViewer convertedText={convertedText} file={file} />
 
-      <p>{convertedText}</p>
       <p>{status}</p>
     </div>
   );
