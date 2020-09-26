@@ -11,6 +11,7 @@ body {
   height: 100vh;
   background-color: var(--violet-color);
   overflow-y: scroll;
+  font-family: "Nunito", sans-serif;
 }
 
 input:active,
@@ -18,4 +19,8 @@ input:focus,
 textarea:active,
 textarea:focus {
   outline: none;
+}
+
+p {
+  margin: 0;
 }
