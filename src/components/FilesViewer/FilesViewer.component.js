@@ -9,11 +9,15 @@ export const FilesViewer = ({ convertedText, file }) => {
 
   return (
     <div className="files-viewer--wrapper">
-      <textarea
-        className="files-viewer__text-input files-viewer__content"
-        value={convertedText}
-        onChange={() => {}}
-      />
+      <div className="files-viewer__content files-viewer__text-input--wrapper">
+        <select></select>
+        <textarea
+          className="files-viewer__text-input"
+          value={convertedText}
+          onChange={() => {}}
+          placeholder="Converted data is shown here!"
+        />
+      </div>
 
       <div className="files-viewer__preview--wrapper files-viewer__content">
         <img
