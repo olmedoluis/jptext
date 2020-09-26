@@ -1,25 +1,41 @@
-import React, { useEffect, useState } from 'react';
-import { createWorker } from 'tesseract.js';
-import './App.css';
+import React, { useCallback, useState } from "react";
+import { createWorker } from "tesseract.js";
+import "./App.css";
+import { FileUploader } from "./components/FileUploader/FileUploader.component";
 
 function App() {
-  const worker = createWorker({
-    logger: m => console.log(m),
-  });
-  const doOCR = async () => {
+  const [status, setStatus] = useState("");
+  const [convertedText, setConvertedText] = useState("");
+
+  const readImage = useCallback(async (file) => {
+    setStatus("reading..");
+
+    const worker = createWorker({
+      logger: ({ status }) => setStatus(status),
+    });
+
     await worker.load();
-    await worker.loadLanguage('eng');
-    await worker.initialize('eng');
-    const { data: { text } } = await worker.recognize('https://tesseract.projectnaptha.com/img/eng_bw.png');
-    setOcr(text);
-  };
-  const [ocr, setOcr] = useState('Recognizing...');
-  useEffect(() => {
-    doOCR();
-  });
+
+    await worker.loadLanguage("eng");
+
+    await worker.initialize("eng");
+
+    const {
+      data: { text },
+    } = await worker.recognize(file);
+
+    setConvertedText(text);
+    setStatus("Completed!");
+  }, []);
+
   return (
     <div className="App">
-      <p>{ocr}</p>
+      <FileUploader
+        onChange={(files) => files.forEach((file) => readImage(file))}
+      />
+
+      <p>{convertedText}</p>
+      <p>{status}</p>
     </div>
   );
 }
