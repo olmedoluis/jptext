@@ -1,0 +1,8 @@
+.header-title {
+  color: var(--white-color);
+  font-weight: 600;
+}
+
+.header-strong {
+  font-weight: 800;
+}
