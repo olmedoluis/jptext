@@ -8,7 +8,10 @@ export const SelectInput = () => {
 
   return (
     <div className="select--wrapper">
-      <button className="select__button" onClick={() => setIsOpen(state => !state)}>
+      <button
+        className={`select__button ${isOpen ? "open" : ""}`}
+        onClick={() => setIsOpen((state) => !state)}
+      >
         <span>Select file</span> <Chevron />
       </button>
 
