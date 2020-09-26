@@ -1,4 +1,5 @@
 import React from "react";
+import "./FileUploader.styles.css";
 
 export const FileUploader = ({ onChange }) => {
   const handleFileSelected = (event) => {
@@ -7,5 +8,17 @@ export const FileUploader = ({ onChange }) => {
     onChange(files[0]);
   };
 
-  return <input type="file" onChange={handleFileSelected} />;
+  return (
+    <div className="file-uploader--wrapper">
+      <input
+        className="file-uploader__input"
+        type="file"
+        onChange={handleFileSelected}
+      />
+
+      <p className="file-uploader__title">Drag your images here!</p>
+
+      <p className="file-uploader__sub-title">or click here</p>
+    </div>
+  );
 };

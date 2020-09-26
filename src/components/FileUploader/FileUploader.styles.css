@@ -1,0 +1,30 @@
+.file-uploader--wrapper {
+  position: relative;
+  text-align: center;
+  height: 70vh;
+  display: grid;
+  place-content: center;
+  border: 2px dashed var(--white-color);
+  border-radius: 5px;
+  margin-bottom: 90px;
+}
+
+.file-uploader__input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.file-uploader__title {
+  font-size: 2em;
+  color: var(--white-color);
+  font-weight: 600;
+}
+
+.file-uploader__sub-title {
+  font-size: 1.5em;
+  color: var(--white-color);
+}

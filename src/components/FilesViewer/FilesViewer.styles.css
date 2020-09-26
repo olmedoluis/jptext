@@ -1,0 +1,33 @@
+.files-viewer--wrapper {
+  display: flex;
+}
+
+.files-viewer__content {
+  margin-right: 10px;
+  height: 300px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.files-viewer__content:last-child {
+  margin-right: 0;
+}
+
+.files-viewer__text-input {
+  padding: 10px;
+  resize: none;
+  width: 50%;
+  border: none;
+}
+
+.files-viewer__preview--wrapper {
+  width: 50%;
+  background-color: var(--white-color);
+}
+
+.files-viewer__preview {
+  max-width: 100%;
+  height: inherit;
+  margin: auto;
+  display: block;
+}
