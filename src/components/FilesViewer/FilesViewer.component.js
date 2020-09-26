@@ -18,7 +18,6 @@ export const FilesViewer = ({ convertedText, file }) => {
       <div className="files-viewer__preview--wrapper files-viewer__content">
         <img
           className="files-viewer__preview"
-          key={file.name}
           src={imageSource}
           alt="preview"
         />
