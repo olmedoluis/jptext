@@ -12,3 +12,10 @@ body {
   background-color: var(--violet-color);
   overflow-y: scroll;
 }
+
+input:active,
+input:focus,
+textarea:active,
+textarea:focus {
+  outline: none;
+}
