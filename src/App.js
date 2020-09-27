@@ -7,13 +7,14 @@ import { JPTextHeader } from "./modules/JPTextHeader/JPTextHeader.component";
 import { Progressbar } from "./components/Progressbar/Progressbar.component";
 
 function App() {
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState({});
   const [convertedText, setConvertedText] = useState("");
   const [files, setFiles] = useState([]);
 
   const readImage = useCallback(async (file) => {
     const worker = createWorker({
-      logger: ({ status }) => setStatus(status),
+      logger: ({ status, progress }) =>
+        setStatus({ status, progress: progress.toFixed() * 100 }),
     });
 
     await worker.load();
@@ -27,7 +28,7 @@ function App() {
     } = await worker.recognize(file);
 
     setConvertedText(text);
-    setStatus("Completed!");
+    setStatus({ status: "Completed!", progress: 100 });
 
     setFiles((oldFiles) => {
       return oldFiles.map((oldFile) => {
@@ -56,11 +57,9 @@ function App() {
 
       <FileUploader onChange={onFileUpload} />
 
-      <Progressbar />
+      <Progressbar progress={status.progress} />
 
       <FilesViewer convertedText={convertedText} files={files} />
-
-      <p>{status}</p>
     </div>
   );
 }
