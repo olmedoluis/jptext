@@ -1,8 +1,11 @@
 :root {
+  --violet-light-color: #ebeafc;
+  --violet-opacity-color: #afaaf780;
   --violet-color: #afaaf7;
   --yellow-color: #f4e095;
-  --black-color: #3b3f3d;
+  --black-color: #555;
   --white-color: #fff;
+  --gray-color: #eee;
 }
 
 body {
@@ -17,7 +20,9 @@ body {
 input:active,
 input:focus,
 textarea:active,
-textarea:focus {
+textarea:focus,
+button:active,
+button:focus {
   outline: none;
 }
 

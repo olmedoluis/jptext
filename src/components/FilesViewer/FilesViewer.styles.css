@@ -4,25 +4,33 @@
 
 .files-viewer__content {
   margin-right: 10px;
-  height: 300px;
+  min-height: 300px;
   box-sizing: border-box;
-  border-radius: 5px;
+  overflow: hidden;
 }
 
 .files-viewer__content:last-child {
   margin-right: 0;
 }
 
+.files-viewer__text-input--wrapper {
+  width: 50%;
+}
 .files-viewer__text-input {
   padding: 10px;
   resize: none;
-  width: 50%;
-  border: none;
+  width: 100%;
+  height: calc(100% - 51px);
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 3px solid var(--violet-opacity-color);
 }
 
 .files-viewer__preview--wrapper {
   width: 50%;
   background-color: var(--white-color);
+  border: 3px solid var(--violet-opacity-color);
+  border-radius: 5px;
 }
 
 .files-viewer__preview {

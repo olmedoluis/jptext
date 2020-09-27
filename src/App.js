@@ -8,7 +8,7 @@ import { JPTextHeader } from "./modules/JPTextHeader/JPTextHeader.component";
 function App() {
   const [status, setStatus] = useState("");
   const [convertedText, setConvertedText] = useState("");
-  const [file, setFile] = useState({});
+  const [files, setFiles] = useState([]);
 
   const readImage = useCallback(async (file) => {
     const worker = createWorker({
@@ -27,12 +27,26 @@ function App() {
 
     setConvertedText(text);
     setStatus("Completed!");
+
+    setFiles((oldFiles) => {
+      return oldFiles.map((oldFile) => {
+        const isConvertedFile = oldFile.name === file.name;
+
+        if (isConvertedFile) {
+          file.convertedText = text;
+        }
+
+        return isConvertedFile ? file : oldFile;
+      });
+    });
   }, []);
 
   const onFileUpload = (file) => {
+    const filesFiltered = files.filter(({ name }) => name !== file.name);
+
     readImage(file);
 
-    setFile(file);
+    setFiles([...filesFiltered, file]);
   };
 
   return (
@@ -41,7 +55,7 @@ function App() {
 
       <FileUploader onChange={onFileUpload} />
 
-      <FilesViewer convertedText={convertedText} file={file} />
+      <FilesViewer convertedText={convertedText} files={files} />
 
       <p>{status}</p>
     </div>
