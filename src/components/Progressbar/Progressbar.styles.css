@@ -4,6 +4,7 @@
   text-align: center;
   font-weight: 600;
   margin-bottom: 40px;
+  color: var(--white-color);
 }
 
 .progress__status {
@@ -12,11 +13,10 @@
 
 .progress__wrapper {
   position: relative;
-
-  background-color: #ddd;
+  background-color: var(--blue-light-color);
   width: 300px;
   display: block;
-  border: 9px solid indigo;
+  border: 9px solid var(--violet-strong-color);
   border-radius: 18px;
   text-align: center;
   font-size: 12px;
@@ -30,16 +30,18 @@
   text-align: center;
   left: 0;
   z-index: 2;
+  font-weight: 800;
 }
 
 .progress__filler {
   position: absolute;
   bottom: 9px;
-  background: green;
+  background: var(--pink-color);
   height: 16px;
   left: 0;
   right: 0;
   bottom: 0;
   border-radius: 9px;
   z-index: 1;
+  transition: right .2s ease-in-out;
 }
