@@ -34,7 +34,11 @@ export const FilesViewer = ({ files }) => {
   return (
     <div className="files-viewer--wrapper">
       <div className="files-viewer__content files-viewer__text-input--wrapper">
-        <SelectInput options={fileNames} onChange={changeSelectedFile} />
+        <SelectInput
+          options={fileNames}
+          onChange={changeSelectedFile}
+          defaultValue={selectedFile.name}
+        />
         <textarea
           className="files-viewer__text-input"
           value={selectedFile.convertedText || ""}
