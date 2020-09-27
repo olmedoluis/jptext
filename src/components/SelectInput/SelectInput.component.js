@@ -4,8 +4,17 @@ import "./SelectInput.styles.css";
 
 export const SelectInput = ({ options, defaultValue, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
+
   const hasOptions = Boolean(options.length);
   const parsedOptions = hasOptions ? options : ["Empty"];
+
+  const onOptionClick = (option) => {
+    if (hasOptions) {
+      onChange(option);
+    }
+
+    setIsOpen(false);
+  };
 
   return (
     <div className="select--wrapper">
@@ -22,7 +31,7 @@ export const SelectInput = ({ options, defaultValue, onChange }) => {
             <div
               key={option}
               className="select__option"
-              onClick={() => hasOptions && onChange(option)}
+              onClick={onOptionClick}
             >
               {option}
             </div>
