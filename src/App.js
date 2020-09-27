@@ -5,9 +5,13 @@ import { FileUploader } from "./components/FileUploader/FileUploader.component";
 import { FilesViewer } from "./components/FilesViewer/FilesViewer.component";
 import { JPTextHeader } from "./modules/JPTextHeader/JPTextHeader.component";
 import { Progressbar } from "./components/Progressbar/Progressbar.component";
+import { Cloud } from "./components/Cloud/Cloud.component";
 
 function App() {
-  const [status, setStatus] = useState({ progress: 0, status: "Upload your file to start!" });
+  const [status, setStatus] = useState({
+    progress: 0,
+    status: "Upload your file to start!",
+  });
   const [convertedText, setConvertedText] = useState("");
   const [files, setFiles] = useState([]);
 
@@ -53,12 +57,11 @@ function App() {
 
   return (
     <div className="App">
+      <Cloud alignments={{ top: 38, left: -15 }} variant="normal" />
+      <Cloud alignments={{ top: 10, left: 60 }} variant="short-top" />
       <JPTextHeader />
-
       <FileUploader onChange={onFileUpload} />
-
       <Progressbar {...status} />
-
       <FilesViewer convertedText={convertedText} files={files} />
     </div>
   );
