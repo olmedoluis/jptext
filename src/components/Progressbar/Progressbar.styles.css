@@ -1,6 +1,16 @@
-.progress--wrapper {
+.progressbar--wrapper {
   width: max-content;
   margin: 0 auto;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.progress__status {
+  margin-bottom: 5px;
+}
+
+.progress__wrapper {
   position: relative;
 
   background-color: #ddd;

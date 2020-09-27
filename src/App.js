@@ -7,7 +7,7 @@ import { JPTextHeader } from "./modules/JPTextHeader/JPTextHeader.component";
 import { Progressbar } from "./components/Progressbar/Progressbar.component";
 
 function App() {
-  const [status, setStatus] = useState({});
+  const [status, setStatus] = useState({ progress: 100 });
   const [convertedText, setConvertedText] = useState("");
   const [files, setFiles] = useState([]);
 
