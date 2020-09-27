@@ -18,7 +18,7 @@ export const FileUploader = ({ onChange }) => {
         onChange={handleFileSelected}
       />
 
-      <p className="file-uploader__title">Drag your images here!</p>
+      <p className="file-uploader__title">Drop your images here!</p>
 
       <p className="file-uploader__sub-title">or click here</p>
     </div>

@@ -4,15 +4,17 @@ import "./App.css";
 import { FileUploader } from "./components/FileUploader/FileUploader.component";
 import { FilesViewer } from "./components/FilesViewer/FilesViewer.component";
 import { JPTextHeader } from "./modules/JPTextHeader/JPTextHeader.component";
+import { Progressbar } from "./components/Progressbar/Progressbar.component";
 
 function App() {
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState({ progress: 0, status: "Upload your file to start!" });
   const [convertedText, setConvertedText] = useState("");
   const [files, setFiles] = useState([]);
 
   const readImage = useCallback(async (file) => {
     const worker = createWorker({
-      logger: ({ status }) => setStatus(status),
+      logger: ({ status, progress }) =>
+        setStatus({ status, progress: progress.toFixed() * 100 }),
     });
 
     await worker.load();
@@ -26,7 +28,7 @@ function App() {
     } = await worker.recognize(file);
 
     setConvertedText(text);
-    setStatus("Completed!");
+    setStatus({ status: "Completed!", progress: 100 });
 
     setFiles((oldFiles) => {
       return oldFiles.map((oldFile) => {
@@ -55,9 +57,9 @@ function App() {
 
       <FileUploader onChange={onFileUpload} />
 
-      <FilesViewer convertedText={convertedText} files={files} />
+      <Progressbar {...status} />
 
-      <p>{status}</p>
+      <FilesViewer convertedText={convertedText} files={files} />
     </div>
   );
 }
