@@ -1,0 +1,31 @@
+.cloud--wrapper {
+  position: absolute;
+}
+
+.cloud {
+  position: relative;
+}
+
+.cloud::before {
+  content: "";
+  position: absolute;
+  width: 25vw;
+  height: 18vh;
+  left: 5vw;
+  border-radius: 100px;
+  background-color: white;
+}
+.cloud::after {
+  content: "";
+  position: absolute;
+  top: 9vh;
+  left: 0;
+  width: 40vw;
+  height: 20vh;
+  border-radius: 100px;
+  background-color: white;
+}
+
+.cloud.short-top::before {
+  width: 20vw;
+}
