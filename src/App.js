@@ -4,6 +4,7 @@ import "./App.css";
 import { FileUploader } from "./components/FileUploader/FileUploader.component";
 import { FilesViewer } from "./components/FilesViewer/FilesViewer.component";
 import { JPTextHeader } from "./modules/JPTextHeader/JPTextHeader.component";
+import { Progressbar } from "./components/Progressbar/Progressbar.component";
 
 function App() {
   const [status, setStatus] = useState("");
@@ -54,6 +55,8 @@ function App() {
       <JPTextHeader />
 
       <FileUploader onChange={onFileUpload} />
+
+      <Progressbar />
 
       <FilesViewer convertedText={convertedText} files={files} />
 
