@@ -1,0 +1,35 @@
+.progressbar--wrapper {
+  width: max-content;
+  margin: 0 auto;
+  position: relative;
+
+  background-color: #ddd;
+  width: 300px;
+  display: block;
+  border: 9px solid indigo;
+  border-radius: 18px;
+  text-align: center;
+  font-size: 12px;
+  height: 34px;
+  box-sizing: border-box;
+}
+
+.progressbar {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  z-index: 2;
+}
+
+.progressbar__filler {
+  position: absolute;
+  bottom: 9px;
+  background: green;
+  height: 16px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 9px;
+  z-index: 1;
+}
