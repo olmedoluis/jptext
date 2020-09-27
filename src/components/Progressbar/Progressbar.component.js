@@ -5,14 +5,16 @@ export const Progressbar = ({ progress = 0 }) => {
   const progressInverted = 100 - progress;
 
   return (
-    <>
-      <div className="progressbar--wrapper">
-        <span className="progressbar">{progressInverted}%</span>
+    <div>
+      <p>status</p>
+
+      <div className="progress--wrapper">
+        <span className="progress">{progressInverted}%</span>
         <span
-          className="progressbar__filler"
+          className="progress__filler"
           style={{ right: `${progressInverted}%` }}
         />
       </div>
-    </>
+    </div>
   );
 };
