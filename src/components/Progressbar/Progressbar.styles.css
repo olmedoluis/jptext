@@ -14,7 +14,7 @@
 .progress__wrapper {
   position: relative;
   background-color: var(--blue-light-color);
-  width: 300px;
+  width: 40vw;
   display: block;
   border: 9px solid var(--violet-strong-color);
   border-radius: 18px;

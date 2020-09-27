@@ -5,9 +5,16 @@ import { FileUploader } from "./components/FileUploader/FileUploader.component";
 import { FilesViewer } from "./components/FilesViewer/FilesViewer.component";
 import { JPTextHeader } from "./modules/JPTextHeader/JPTextHeader.component";
 import { Progressbar } from "./components/Progressbar/Progressbar.component";
+import { Cloud } from "./components/Cloud/Cloud.component";
+import { JPTextFooter } from "./modules/JPTextFooter/JPTextFooter.component";
+
+const elementIdToScroll = "scrolled-element";
 
 function App() {
-  const [status, setStatus] = useState({ progress: 0, status: "Upload your file to start!" });
+  const [status, setStatus] = useState({
+    progress: 0,
+    status: "Upload your file to start!",
+  });
   const [convertedText, setConvertedText] = useState("");
   const [files, setFiles] = useState([]);
 
@@ -45,22 +52,32 @@ function App() {
 
   const onFileUpload = (file) => {
     const filesFiltered = files.filter(({ name }) => name !== file.name);
+    const elementToScroll = document.getElementById(elementIdToScroll);
 
     readImage(file);
+
+    elementToScroll.scrollIntoView({ behavior: "smooth" });
 
     setFiles([...filesFiltered, file]);
   };
 
   return (
-    <div className="App">
-      <JPTextHeader />
+    <>
+      <Cloud alignments={{ top: 38, left: -15 }} variant="normal" />
+      <Cloud alignments={{ top: 10, left: 60 }} variant="short-top" />
 
-      <FileUploader onChange={onFileUpload} />
+      <div className="App">
+        <JPTextHeader />
 
-      <Progressbar {...status} />
+        <FileUploader onChange={onFileUpload} />
 
-      <FilesViewer convertedText={convertedText} files={files} />
-    </div>
+        <Progressbar id={elementIdToScroll} {...status} />
+
+        <FilesViewer convertedText={convertedText} files={files} />
+      </div>
+
+      <JPTextFooter />
+    </>
   );
 }
 

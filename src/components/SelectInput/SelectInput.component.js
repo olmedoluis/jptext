@@ -31,7 +31,7 @@ export const SelectInput = ({ options, defaultValue, onChange }) => {
             <div
               key={option}
               className="select__option"
-              onClick={onOptionClick}
+              onClick={() => onOptionClick(option)}
             >
               {option}
             </div>
