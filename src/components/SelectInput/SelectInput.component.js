@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Chevron } from "../../assets/icons/Chevron.icon";
 import "./SelectInput.styles.css";
 
-export const SelectInput = ({ options, onChange }) => {
+export const SelectInput = ({ options, defaultValue, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
   const hasOptions = Boolean(options.length);
   const parsedOptions = hasOptions ? options : ["Empty"];
@@ -13,7 +13,7 @@ export const SelectInput = ({ options, onChange }) => {
         className={`select__button ${isOpen ? "open" : ""}`}
         onClick={() => setIsOpen((state) => !state)}
       >
-        <span>Select file</span> <Chevron />
+        <span>{defaultValue || "Select file"}</span> <Chevron />
       </button>
 
       {isOpen && (
