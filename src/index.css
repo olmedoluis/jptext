@@ -1,11 +1,11 @@
 :root {
+  --pink-color: #cc99e5;
   --violet-light-color: #ebeafc;
-  --violet-opacity-color: #afaaf780;
+  --blue-light-color: #d6d4fa;
   --violet-color: #afaaf7;
   --yellow-color: #f4e095;
-  --black-color: #555;
+  --black-color: #444;
   --white-color: #fff;
-  --gray-color: #eee;
 }
 
 body {

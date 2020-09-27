@@ -48,6 +48,9 @@ export const FilesViewer = ({ files }) => {
       </div>
 
       <div className="files-viewer__preview--wrapper files-viewer__content">
+        <p className="files-viewer__title">
+          Preview {selectedFile.name ? selectedFile.name : ""}
+        </p>
         <img
           className="files-viewer__preview"
           src={imageSource}
