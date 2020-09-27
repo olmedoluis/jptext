@@ -1,4 +1,4 @@
 .footer--wrapper {
-  height: 100px;
-  background-color: green;
+  height: 70px;
+  background-color: var(--green-color);
 }
