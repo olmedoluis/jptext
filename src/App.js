@@ -8,6 +8,8 @@ import { Progressbar } from "./components/Progressbar/Progressbar.component";
 import { Cloud } from "./components/Cloud/Cloud.component";
 import { JPTextFooter } from "./modules/JPTextFooter/JPTextFooter.component";
 
+const elementIdToScroll = "scrolled-element";
+
 function App() {
   const [status, setStatus] = useState({
     progress: 0,
@@ -50,8 +52,11 @@ function App() {
 
   const onFileUpload = (file) => {
     const filesFiltered = files.filter(({ name }) => name !== file.name);
+    const elementToScroll = document.getElementById(elementIdToScroll);
 
     readImage(file);
+
+    elementToScroll.scrollIntoView({ behavior: "smooth" });
 
     setFiles([...filesFiltered, file]);
   };
@@ -66,7 +71,7 @@ function App() {
 
         <FileUploader onChange={onFileUpload} />
 
-        <Progressbar {...status} />
+        <Progressbar id={elementIdToScroll} {...status} />
 
         <FilesViewer convertedText={convertedText} files={files} />
       </div>
