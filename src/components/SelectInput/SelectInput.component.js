@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { Chevron } from "../../assets/icons/Chevron.icon";
 import "./SelectInput.styles.css";
 
-export const SelectInput = () => {
+export const SelectInput = ({ options, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const options = ["wea", "wea1"];
+  const hasOptions = Boolean(options.length);
+  const parsedOptions = hasOptions ? options : ["Empty"];
 
   return (
     <div className="select--wrapper">
@@ -17,8 +18,12 @@ export const SelectInput = () => {
 
       {isOpen && (
         <div className="select__option--wrapper">
-          {options.map((option) => (
-            <div key={option} className="select__option">
+          {parsedOptions.map((option) => (
+            <div
+              key={option}
+              className="select__option"
+              onClick={() => hasOptions && onChange(option)}
+            >
               {option}
             </div>
           ))}

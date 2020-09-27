@@ -15,6 +15,7 @@
   background-color: var(--white-color);
   color: var(--black-color);
   font-size: 17px;
+  transition: 0.2s background-color ease-in-out;
 }
 .select__button svg {
   width: 13px;
@@ -41,6 +42,7 @@
   font-size: 15px;
   padding: 3px 0 3px 10px;
   cursor: pointer;
+  transition: 0.2s background-color ease-in-out;
 }
 
 .select__option:hover {

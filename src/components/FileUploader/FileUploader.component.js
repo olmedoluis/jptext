@@ -3,9 +3,11 @@ import "./FileUploader.styles.css";
 
 export const FileUploader = ({ onChange }) => {
   const handleFileSelected = (event) => {
-    const files = Array.from(event.target.files);
+    const [file] = Array.from(event.target.files);
 
-    onChange(files[0]);
+    if (file) {
+      onChange(file);
+    }
   };
 
   return (
