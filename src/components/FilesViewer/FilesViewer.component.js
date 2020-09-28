@@ -58,7 +58,7 @@ export const FilesViewer = ({ files }) => {
             defaultValue={selectedFile.name}
           />
 
-          <IconButton icon={<Copy />} onClick={copyConvertedText} />
+          <IconButton icon={<Copy />} onClick={copyConvertedText} toolTipText="Copied!"/>
         </div>
 
         <textarea
