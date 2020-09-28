@@ -6,7 +6,6 @@
   margin-right: 10px;
   min-height: 300px;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .files-viewer__content:last-child {
