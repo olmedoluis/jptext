@@ -66,6 +66,7 @@ export const FilesViewer = ({ files }) => {
           value={selectedFile.convertedText || ""}
           onChange={() => {}}
           placeholder="Converted data is shown here!"
+          disabled
         />
       </div>
 
