@@ -11,18 +11,38 @@
   color: var(--black-color);
   font-size: 17px;
   transition: 0.2s ease-in-out;
-  transition-property: background-color color;
+  transition-property: background-color, color;
+  position: relative;
 }
-
 .button:hover {
   background-color: var(--violet-light-color);
 }
-
 .button svg {
   width: 13px;
 }
-
 .button:active {
   background-color: var(--blue-light-color);
   color: #777;
+}
+
+.toolTip {
+  position: absolute;
+  bottom: 140%;
+  background-color: #333;
+  color: white;
+  padding: 2px 15px;
+  border-radius: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.toolTip::after {
+  content: "";
+  position: absolute;
+  border: 5px solid;
+  border-color: #333 transparent transparent transparent;
+  height: 5px;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
 }
