@@ -44,10 +44,24 @@ export const FilesViewer = ({ files }) => {
             defaultValue={selectedFile.name}
           />
 
-          <IconButton icon={<Copy />} />
+          <IconButton
+            icon={<Copy />}
+            onClick={() => {
+              const inputWithConvertedData = document.getElementById(
+                "converted-data-viewer"
+              );
+
+              if (inputWithConvertedData) {
+                inputWithConvertedData.select();
+
+                document.execCommand("copy");
+              }
+            }}
+          />
         </div>
 
         <textarea
+          id="converted-data-viewer"
           className="files-viewer__text-input"
           value={selectedFile.convertedText || ""}
           onChange={() => {}}
