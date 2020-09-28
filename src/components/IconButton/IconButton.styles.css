@@ -25,22 +25,31 @@
   color: #777;
 }
 
-.toolTip {
+.tool-tip {
   position: absolute;
-  bottom: 140%;
-  background-color: #333;
-  color: white;
-  padding: 2px 15px;
+  bottom: 100%;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  padding: 5px 15px;
   border-radius: 10px;
   left: 50%;
   transform: translateX(-50%);
   pointer-events: none;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  transition-property: bottom, opacity;
 }
-.toolTip::after {
+.tool-tip.open {
+  bottom: 140%;
+  opacity: 1;
+}
+.tool-tip::after {
   content: "";
   position: absolute;
   border: 5px solid;
-  border-color: #333 transparent transparent transparent;
+  border-color: var(--black-color) transparent transparent transparent;
   height: 5px;
   bottom: -15px;
   left: 50%;
