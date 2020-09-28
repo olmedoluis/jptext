@@ -4,12 +4,19 @@ import "./IconButton.styles.css";
 export const IconButton = ({ text, icon, onClick, className, toolTipText }) => {
   const [isTooltipOpen, setIsTooltipOpen] = useState(false);
   const hasTooltip = Boolean(toolTipText);
-  toolTipText = "wea";
+
+  const onButtonClick = () => {
+    setIsTooltipOpen(true);
+
+    setTimeout(() => setIsTooltipOpen(false), 1000);
+
+    onClick();
+  };
 
   return (
-    <button className={`button ${className}`} onClick={onClick}>
+    <button className={`button ${className}`} onClick={onButtonClick}>
       {hasTooltip && (
-        <span className={`toolTip ${isTooltipOpen ? "open" : ""}`}>
+        <span className={`tool-tip ${isTooltipOpen ? "open" : ""}`}>
           {toolTipText}
         </span>
       )}
