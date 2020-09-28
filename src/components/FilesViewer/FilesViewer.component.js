@@ -7,6 +7,8 @@ import { Copy } from "../../assets/icons/Copy.icon";
 const defaultImageUrl =
   "https://i.pinimg.com/originals/ae/8a/c2/ae8ac2fa217d23aadcc913989fcc34a2.png";
 
+const inputWithConvertedDataId = "converted-data-viewer";
+
 export const FilesViewer = ({ files }) => {
   const [selectedFile, setSelectedFile] = useState({});
 
@@ -33,6 +35,18 @@ export const FilesViewer = ({ files }) => {
     }
   }, [files]);
 
+  const copyConvertedText = () => {
+    const inputWithConvertedData = document.getElementById(
+      inputWithConvertedDataId
+    );
+
+    if (inputWithConvertedData) {
+      inputWithConvertedData.select();
+
+      document.execCommand("copy");
+    }
+  };
+
   return (
     <div className="files-viewer--wrapper">
       <div className="files-viewer__content files-viewer__text-input--wrapper">
@@ -44,24 +58,11 @@ export const FilesViewer = ({ files }) => {
             defaultValue={selectedFile.name}
           />
 
-          <IconButton
-            icon={<Copy />}
-            onClick={() => {
-              const inputWithConvertedData = document.getElementById(
-                "converted-data-viewer"
-              );
-
-              if (inputWithConvertedData) {
-                inputWithConvertedData.select();
-
-                document.execCommand("copy");
-              }
-            }}
-          />
+          <IconButton icon={<Copy />} onClick={copyConvertedText} />
         </div>
 
         <textarea
-          id="converted-data-viewer"
+          id={inputWithConvertedDataId}
           className="files-viewer__text-input"
           value={selectedFile.convertedText || ""}
           onChange={() => {}}
