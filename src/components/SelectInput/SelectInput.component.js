@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Chevron } from "../../assets/icons/Chevron.icon";
+import { IconButton } from "../IconButton/IconButton.component";
 import "./SelectInput.styles.css";
 
-export const SelectInput = ({ options, defaultValue, onChange }) => {
+export const SelectInput = ({ options, defaultValue, onChange, className }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const hasOptions = Boolean(options.length);
@@ -17,13 +18,13 @@ export const SelectInput = ({ options, defaultValue, onChange }) => {
   };
 
   return (
-    <div className="select--wrapper">
-      <button
+    <div className={`select--wrapper ${className}`}>
+      <IconButton
         className={`select__button ${isOpen ? "open" : ""}`}
+        text={defaultValue || "Select file"}
+        icon={<Chevron />}
         onClick={() => setIsOpen((state) => !state)}
-      >
-        <span>{defaultValue || "Select file"}</span> <Chevron />
-      </button>
+      />
 
       {isOpen && (
         <div className="select__option--wrapper">

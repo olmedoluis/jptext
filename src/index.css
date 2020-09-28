@@ -15,9 +15,8 @@ body {
   box-sizing: border-box;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
   background-color: var(--violet-color);
-  overflow-y: scroll;
+  overflow: hidden scroll;
   font-family: "Nunito", sans-serif;
 }
 

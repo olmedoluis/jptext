@@ -4,24 +4,6 @@
 
 .select__button {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  border: 3px solid var(--blue-light-color);
-  margin-bottom: 10px;
-  padding: 5px 10px;
-  cursor: pointer;
-  background-color: var(--white-color);
-  color: var(--black-color);
-  font-size: 17px;
-  transition: 0.2s background-color ease-in-out;
-}
-.select__button svg {
-  width: 13px;
-}
-.select__button:active {
-  background-color: var(--violet-light-color);
 }
 .select__button.open {
   border-radius: 5px 5px 0 0;
