@@ -27,6 +27,15 @@
   font-family: "Nunito", sans-serif;
 }
 
+.files-viewer__text-input__options {
+  display: flex;
+}
+
+.files-select {
+  flex: 1;
+  margin-right: 10px;
+}
+
 .files-viewer__preview--wrapper {
   width: 50%;
   background-color: var(--white-color);

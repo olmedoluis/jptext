@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Chevron } from "../../assets/icons/Chevron.icon";
 import "./SelectInput.styles.css";
 
-export const SelectInput = ({ options, defaultValue, onChange }) => {
+export const SelectInput = ({ options, defaultValue, onChange, className }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const hasOptions = Boolean(options.length);
@@ -17,7 +17,7 @@ export const SelectInput = ({ options, defaultValue, onChange }) => {
   };
 
   return (
-    <div className="select--wrapper">
+    <div className={`select--wrapper ${className}`}>
       <button
         className={`select__button ${isOpen ? "open" : ""}`}
         onClick={() => setIsOpen((state) => !state)}

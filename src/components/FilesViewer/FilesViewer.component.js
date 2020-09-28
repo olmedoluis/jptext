@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { IconButton } from "../IconButton/IconButton.component";
 import { SelectInput } from "../SelectInput/SelectInput.component";
 import "./FilesViewer.styles.css";
+import { Copy } from "../../assets/icons/Copy.icon";
 
 const defaultImageUrl =
   "https://i.pinimg.com/originals/ae/8a/c2/ae8ac2fa217d23aadcc913989fcc34a2.png";
@@ -34,11 +36,17 @@ export const FilesViewer = ({ files }) => {
   return (
     <div className="files-viewer--wrapper">
       <div className="files-viewer__content files-viewer__text-input--wrapper">
-        <SelectInput
-          options={fileNames}
-          onChange={changeSelectedFile}
-          defaultValue={selectedFile.name}
-        />
+        <div className="files-viewer__text-input__options">
+          <SelectInput
+            className="files-select"
+            options={fileNames}
+            onChange={changeSelectedFile}
+            defaultValue={selectedFile.name}
+          />
+
+          <IconButton icon={<Copy />} />
+        </div>
+
         <textarea
           className="files-viewer__text-input"
           value={selectedFile.convertedText || ""}
