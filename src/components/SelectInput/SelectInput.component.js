@@ -25,12 +25,6 @@ export const SelectInput = ({ options, defaultValue, onChange, className }) => {
         icon={<Chevron />}
         onClick={() => setIsOpen((state) => !state)}
       />
-      {/* <button
-        className={`select__button ${isOpen ? "open" : ""}`}
-        onClick={() => setIsOpen((state) => !state)}
-      >
-        <span>{defaultValue || "Select file"}</span> <Chevron />
-      </button> */}
 
       {isOpen && (
         <div className="select__option--wrapper">
