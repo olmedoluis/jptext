@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IconButton } from "../IconButton/IconButton.component";
 import { SelectInput } from "../SelectInput/SelectInput.component";
-import "./FilesViewer.styles.css";
 import { Copy } from "../../assets/icons/Copy.icon";
+import "./FilesViewer.styles.css";
 
 const defaultImageUrl =
   "https://i.pinimg.com/originals/ae/8a/c2/ae8ac2fa217d23aadcc913989fcc34a2.png";
@@ -11,6 +11,7 @@ const inputWithConvertedDataId = "converted-data-viewer";
 
 export const FilesViewer = ({ files }) => {
   const [selectedFile, setSelectedFile] = useState({});
+  const inputWithConvertedData = useRef(null);
 
   const hasFile = selectedFile instanceof File;
 
@@ -36,12 +37,10 @@ export const FilesViewer = ({ files }) => {
   }, [files]);
 
   const copyConvertedText = () => {
-    const inputWithConvertedData = document.getElementById(
-      inputWithConvertedDataId
-    );
+    const input = inputWithConvertedData && inputWithConvertedData.current;
 
-    if (inputWithConvertedData) {
-      inputWithConvertedData.select();
+    if (input) {
+      input.select();
 
       document.execCommand("copy");
     }
@@ -58,16 +57,20 @@ export const FilesViewer = ({ files }) => {
             defaultValue={selectedFile.name}
           />
 
-          <IconButton icon={<Copy />} onClick={copyConvertedText} toolTipText="Copied!"/>
+          <IconButton
+            icon={<Copy />}
+            onClick={copyConvertedText}
+            toolTipText="Copied!"
+          />
         </div>
 
         <textarea
           id={inputWithConvertedDataId}
+          ref={inputWithConvertedData}
           className="files-viewer__text-input"
           value={selectedFile.convertedText || ""}
           onChange={() => {}}
           placeholder="Converted data is shown here!"
-          disabled
         />
       </div>
 
