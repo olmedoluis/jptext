@@ -7,8 +7,6 @@ import "./FilesViewer.styles.css";
 const defaultImageUrl =
   "https://i.pinimg.com/originals/ae/8a/c2/ae8ac2fa217d23aadcc913989fcc34a2.png";
 
-const inputWithConvertedDataId = "converted-data-viewer";
-
 export const FilesViewer = ({ files }) => {
   const [selectedFile, setSelectedFile] = useState({});
   const inputWithConvertedData = useRef(null);
@@ -65,7 +63,6 @@ export const FilesViewer = ({ files }) => {
         </div>
 
         <textarea
-          id={inputWithConvertedDataId}
           ref={inputWithConvertedData}
           className="files-viewer__text-input"
           value={selectedFile.convertedText || ""}
