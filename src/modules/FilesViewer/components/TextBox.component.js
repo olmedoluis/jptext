@@ -13,7 +13,7 @@ export const TextBox = ({ text, isLoading, boxRef = null }) => {
         value={isLoading ? " " : value}
         onChange={() => {}}
       />
-      {isLoading ? <Loader /> : ""}
+      {isLoading && <Loader text="Your file is loading!" />}
     </div>
   );
 };
