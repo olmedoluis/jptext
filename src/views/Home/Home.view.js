@@ -66,7 +66,7 @@ export const Home = () => {
       <Cloud alignments={{ top: 38, left: -15 }} variant="normal" />
       <Cloud alignments={{ top: 10, left: 60 }} variant="short-top" />
 
-      <div className="App">
+      <div className="home">
         <JPTextHeader />
 
         <FileUploader onChange={onFileUpload} />
