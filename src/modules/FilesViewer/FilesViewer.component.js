@@ -3,7 +3,7 @@ import { IconButton } from "../../shared-components/IconButton/IconButton.compon
 import { SelectInput } from "../../shared-components/SelectInput/SelectInput.component";
 import { Copy } from "../../assets/icons/Copy.icon";
 import "./FilesViewer.styles.css";
-import { TextBox } from "./components/TextBox.component";
+import { TextBox } from "./components/TextBox/TextBox.component";
 
 const defaultImageUrl =
   "https://i.pinimg.com/originals/ae/8a/c2/ae8ac2fa217d23aadcc913989fcc34a2.png";
