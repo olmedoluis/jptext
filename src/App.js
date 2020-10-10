@@ -1,11 +1,11 @@
 import React, { useCallback, useState } from "react";
 import { createWorker } from "tesseract.js";
 import "./App.css";
-import { FileUploader } from "./components/FileUploader/FileUploader.component";
-import { FilesViewer } from "./components/FilesViewer/FilesViewer.component";
+import { FileUploader } from "./shared-components/FileUploader/FileUploader.component";
+import { FilesViewer } from "./shared-components/FilesViewer/FilesViewer.component";
 import { JPTextHeader } from "./modules/JPTextHeader/JPTextHeader.component";
-import { Progressbar } from "./components/Progressbar/Progressbar.component";
-import { Cloud } from "./components/Cloud/Cloud.component";
+import { Progressbar } from "./shared-components/Progressbar/Progressbar.component";
+import { Cloud } from "./shared-components/Cloud/Cloud.component";
 import { JPTextFooter } from "./modules/JPTextFooter/JPTextFooter.component";
 
 const elementIdToScroll = "scrolled-element";
