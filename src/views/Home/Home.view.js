@@ -17,7 +17,7 @@ export const Home = () => {
   });
   const [convertedText, setConvertedText] = useState("");
   const [files, setFiles] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const readImage = useCallback(async (file) => {
     const worker = createWorker({
