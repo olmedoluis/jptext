@@ -65,9 +65,8 @@ export const FilesViewer = ({ files }) => {
         <textarea
           ref={inputWithConvertedData}
           className="files-viewer__text-input"
-          value={selectedFile.convertedText || ""}
+          value={selectedFile.convertedText || " "}
           onChange={() => {}}
-          placeholder="Converted data is shown here!"
         />
       </div>
 
