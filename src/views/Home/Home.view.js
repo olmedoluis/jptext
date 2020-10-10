@@ -1,16 +1,16 @@
 import React, { useCallback, useState } from "react";
 import { createWorker } from "tesseract.js";
-import "./App.css";
-import { FileUploader } from "./components/FileUploader/FileUploader.component";
-import { FilesViewer } from "./components/FilesViewer/FilesViewer.component";
-import { JPTextHeader } from "./modules/JPTextHeader/JPTextHeader.component";
-import { Progressbar } from "./components/Progressbar/Progressbar.component";
-import { Cloud } from "./components/Cloud/Cloud.component";
-import { JPTextFooter } from "./modules/JPTextFooter/JPTextFooter.component";
+import { FileUploader } from "../../modules/FileUploader/FileUploader.component";
+import { FilesViewer } from "../../modules/FilesViewer/FilesViewer.component";
+import { JPTextHeader } from "../../modules/JPTextHeader/JPTextHeader.component";
+import { Progressbar } from "../../shared-components/Progressbar/Progressbar.component";
+import { Cloud } from "../../shared-components/Cloud/Cloud.component";
+import { JPTextFooter } from "../../modules/JPTextFooter/JPTextFooter.component";
+import "./Home.styles.css";
 
 const elementIdToScroll = "scrolled-element";
 
-function App() {
+export const Home = () => {
   const [status, setStatus] = useState({
     progress: 0,
     status: "Upload your file to start!",
@@ -66,7 +66,7 @@ function App() {
       <Cloud alignments={{ top: 38, left: -15 }} variant="normal" />
       <Cloud alignments={{ top: 10, left: 60 }} variant="short-top" />
 
-      <div className="App">
+      <div className="home">
         <JPTextHeader />
 
         <FileUploader onChange={onFileUpload} />
@@ -79,6 +79,4 @@ function App() {
       <JPTextFooter />
     </>
   );
-}
-
-export default App;
+};

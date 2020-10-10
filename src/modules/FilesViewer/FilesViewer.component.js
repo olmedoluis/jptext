@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { IconButton } from "../IconButton/IconButton.component";
-import { SelectInput } from "../SelectInput/SelectInput.component";
+import { IconButton } from "../../shared-components/IconButton/IconButton.component";
+import { SelectInput } from "../../shared-components/SelectInput/SelectInput.component";
 import { Copy } from "../../assets/icons/Copy.icon";
 import "./FilesViewer.styles.css";
 
