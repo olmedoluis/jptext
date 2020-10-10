@@ -6,7 +6,7 @@ import { JPTextHeader } from "../../modules/JPTextHeader/JPTextHeader.component"
 import { Progressbar } from "../../shared-components/Progressbar/Progressbar.component";
 import { Cloud } from "../../shared-components/Cloud/Cloud.component";
 import { JPTextFooter } from "../../modules/JPTextFooter/JPTextFooter.component";
-import "./Home.view.css";
+import "./Home.styles.css";
 
 const elementIdToScroll = "scrolled-element";
 
