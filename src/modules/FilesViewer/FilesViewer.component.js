@@ -3,11 +3,12 @@ import { IconButton } from "../../shared-components/IconButton/IconButton.compon
 import { SelectInput } from "../../shared-components/SelectInput/SelectInput.component";
 import { Copy } from "../../assets/icons/Copy.icon";
 import "./FilesViewer.styles.css";
+import { TextBox } from "./components/TextBox.component";
 
 const defaultImageUrl =
   "https://i.pinimg.com/originals/ae/8a/c2/ae8ac2fa217d23aadcc913989fcc34a2.png";
 
-export const FilesViewer = ({ files }) => {
+export const FilesViewer = ({ files, isLoading }) => {
   const [selectedFile, setSelectedFile] = useState({});
   const inputWithConvertedData = useRef(null);
 
@@ -62,11 +63,10 @@ export const FilesViewer = ({ files }) => {
           />
         </div>
 
-        <textarea
-          ref={inputWithConvertedData}
-          className="files-viewer__text-input"
-          value={selectedFile.convertedText || " "}
-          onChange={() => {}}
+        <TextBox
+          boxRef={inputWithConvertedData}
+          text={selectedFile.convertedText}
+          isLoading={isLoading}
         />
       </div>
 
