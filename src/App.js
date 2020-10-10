@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { createWorker } from "tesseract.js";
 import "./App.css";
-import { FileUploader } from "./shared-components/FileUploader/FileUploader.component";
+import { FileUploader } from "./modules/FileUploader/FileUploader.component";
 import { FilesViewer } from "./modules/FilesViewer/FilesViewer.component";
 import { JPTextHeader } from "./modules/JPTextHeader/JPTextHeader.component";
 import { Progressbar } from "./shared-components/Progressbar/Progressbar.component";
