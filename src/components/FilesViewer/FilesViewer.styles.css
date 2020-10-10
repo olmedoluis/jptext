@@ -24,7 +24,13 @@
   border-radius: 5px;
   border: 3px solid var(--blue-light-color);
   font-family: "Nunito", sans-serif;
+  font-weight: 600;
   background-color: var(--white-color);
+  caret-color: transparent;
+  color: var(--black-color);
+}
+.files-viewer__text-input::selection {
+  background-color: none;
 }
 
 .files-viewer__text-input__options {
@@ -40,7 +46,16 @@
   width: 50%;
   background-color: var(--white-color);
   border: 3px solid var(--blue-light-color);
+  border-radius: 0 0 3px 3px;
   border-radius: 5px;
+  overflow: hidden;
+}
+
+.files-viewer__preview {
+  max-width: 100%;
+  height: inherit;
+  margin: auto;
+  display: block;
 }
 
 .files-viewer__title {
@@ -49,11 +64,5 @@
   color: var(--white-color);
   font-weight: 600;
   border-bottom: 3px solid #d6d4fa;
-}
-
-.files-viewer__preview {
-  max-width: 100%;
-  height: inherit;
-  margin: auto;
-  display: block;
+  border-radius: 3px 3px 0 0;
 }
