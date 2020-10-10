@@ -14,16 +14,17 @@
   margin: 0 auto;
 }
 
-.image-empty--wrapper h2 {
+.image-empty--wrapper .image-empty__title {
   text-align: center;
+  font-size: 1.4em;
   color: var(--black-color);
   font-weight: 800;
   margin: 20px 0 0 0;
 }
 
-.image-empty--wrapper p {
+.image-empty--wrapper .image-empty__paragraph {
   text-align: center;
   font-weight: 600;
   color: var(--black-color);
-  margin-top: 5px;
+  margin: 0;
 }
