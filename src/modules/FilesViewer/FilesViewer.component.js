@@ -3,10 +3,8 @@ import { IconButton } from "../../shared-components/IconButton/IconButton.compon
 import { SelectInput } from "../../shared-components/SelectInput/SelectInput.component";
 import { Copy } from "../../assets/icons/Copy.icon";
 import "./FilesViewer.styles.css";
-import { TextBox } from "./components/TextBox.component";
-
-const defaultImageUrl =
-  "https://i.pinimg.com/originals/ae/8a/c2/ae8ac2fa217d23aadcc913989fcc34a2.png";
+import { TextBox } from "./components/TextBox/TextBox.component";
+import { ImageEmpty } from "./components/ImageEmpty/ImageEmpty.component";
 
 export const FilesViewer = ({ files, isLoading }) => {
   const [selectedFile, setSelectedFile] = useState({});
@@ -15,9 +13,6 @@ export const FilesViewer = ({ files, isLoading }) => {
   const hasFile = selectedFile instanceof File;
 
   const fileNames = files.map(({ name }) => name);
-  const imageSource = hasFile
-    ? URL.createObjectURL(selectedFile)
-    : defaultImageUrl;
 
   const changeSelectedFile = (fileName) => {
     const fileSelected = files.find(({ name }) => name === fileName);
@@ -72,11 +67,15 @@ export const FilesViewer = ({ files, isLoading }) => {
 
       <div className="files-viewer__preview--wrapper files-viewer__content">
         <p className="files-viewer__title">Preview</p>
-        <img
-          className="files-viewer__preview"
-          src={imageSource}
-          alt="preview"
-        />
+        {hasFile ? (
+          <img
+            className="files-viewer__preview"
+            src={URL.createObjectURL(selectedFile)}
+            alt="preview"
+          />
+        ) : (
+          <ImageEmpty />
+        )}
       </div>
     </div>
   );

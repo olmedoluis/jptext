@@ -1,6 +1,7 @@
 .text-box--wrapper {
   position: relative;
   height: calc(100% - 51px);
+  color: var(--black-color);
 }
 
 .text-box__input {
@@ -15,8 +16,16 @@
   font-weight: 600;
   background-color: var(--white-color);
   caret-color: transparent;
-  color: var(--black-color);
 }
 .text-box__input::selection {
   background-color: none;
+}
+
+.text-box--wrapper .text-box__message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 19px;
+  font-weight: 600;
 }
