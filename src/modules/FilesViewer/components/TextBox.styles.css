@@ -1,0 +1,22 @@
+.text-box--wrapper {
+  position: relative;
+  height: calc(100% - 51px);
+}
+
+.text-box__input {
+  padding: 10px;
+  resize: none;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 3px solid var(--blue-light-color);
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  background-color: var(--white-color);
+  caret-color: transparent;
+  color: var(--black-color);
+}
+.text-box__input::selection {
+  background-color: none;
+}

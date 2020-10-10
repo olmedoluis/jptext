@@ -17,12 +17,14 @@ export const Home = () => {
   });
   const [convertedText, setConvertedText] = useState("");
   const [files, setFiles] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const readImage = useCallback(async (file) => {
     const worker = createWorker({
       logger: ({ status, progress }) =>
         setStatus({ status, progress: progress.toFixed() * 100 }),
     });
+    setIsLoading(true);
 
     await worker.load();
 
@@ -35,6 +37,7 @@ export const Home = () => {
     } = await worker.recognize(file);
 
     setConvertedText(text);
+    setIsLoading(false);
     setStatus({ status: "Completed!", progress: 100 });
 
     setFiles((oldFiles) => {
@@ -73,7 +76,11 @@ export const Home = () => {
 
         <Progressbar id={elementIdToScroll} {...status} />
 
-        <FilesViewer convertedText={convertedText} files={files} />
+        <FilesViewer
+          convertedText={convertedText}
+          files={files}
+          isLoading={isLoading}
+        />
       </div>
 
       <JPTextFooter />
