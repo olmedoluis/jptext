@@ -1,68 +1,139 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-## Available Scripts
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/olmedoluis/jptext">
+    <img src="images/jpt-icon.png" alt="Logo" width="80" height="80">
+  </a>
 
-In the project directory, you can run:
+  <h3 align="center">JPText</h3>
 
-### `npm start`
+  <p align="center">
+    JPText is a web application to convert images to text
+    <br />
+    <br />
+    <a href="https://github.com/olmedoluis/jptext/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/olmedoluis/jptext/issues">Request Feature</a>
+  </p>
+</p>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- TABLE OF CONTENTS -->
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Table of Contents
 
-### `npm test`
+- [About the Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- ABOUT THE PROJECT -->
 
-### `npm run build`
+## About The Project
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+JPText is a web application built to convert images to text that we can copy and use anywhere we want.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Built With
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [React](https://reactjs.org/)
+- [Tesseract.js](https://tesseract.projectnaptha.com/)
 
-### `npm run eject`
+<!-- GETTING STARTED -->
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Getting Started
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To get a local copy up and running follow these simple steps.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Prerequisites
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This is an example of how to list things you need to use the software and how to install them.
 
-## Learn More
+- npm
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+npm install npm@latest -g
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Installation
 
-### Code Splitting
+1. Clone the repo
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```sh
+git clone https://github.com/olmedoluis/jptext.git
+```
 
-### Analyzing the Bundle Size
+2. Install NPM packages
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```sh
+npm install
+```
 
-### Making a Progressive Web App
+<!-- USAGE EXAMPLES -->
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Usage
 
-### Advanced Configuration
+1. If you have downloaded the project, run the following command, if you didn't, just go to [www.jptext.netlify.app](www.jptext.netlify.app).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+```sh
+npm start
+```
 
-### Deployment
+2. Once the web site is up, click on the big dotted area to select your image with the file selector window or just drag your image into it.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+3. After uploading the file, it will automatically scroll down and show you status while your image is being converted.
 
-### `npm run build` fails to minify
+4. Wait until the process is completed and you're done! You can copy the content with the button in the middle.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<!-- CONTRIBUTING -->
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- CONTACT -->
+
+## Contact
+
+Luis Olmedo - olmedoluis012@gmail.com
+
+Project Link: [https://github.com/olmedoluis/jptext](https://github.com/olmedoluis/jptext)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/olmedoluis/jptext.svg?style=flat-square
+[contributors-url]: https://github.com/olmedoluis/jptext/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/olmedoluis/jptext.svg?style=flat-square
+[forks-url]: https://github.com/olmedoluis/jptext/network/members
+[stars-shield]: https://img.shields.io/github/stars/olmedoluis/jptext.svg?style=flat-square
+[stars-url]: https://github.com/olmedoluis/jptext/stargazers
+[issues-shield]: https://img.shields.io/github/issues/olmedoluis/jptext.svg?style=flat-square
+[issues-url]: https://github.com/olmedoluis/jptext/issues
+[license-shield]: https://img.shields.io/github/license/olmedoluis/jptext.svg?style=flat-square
+[license-url]: https://github.com/olmedoluis/jptext/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/luisaolmedo
+[product-screenshot]: images/screenshot.png
