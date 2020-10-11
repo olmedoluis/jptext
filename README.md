@@ -18,8 +18,6 @@
     JPText is a web application to convert images to text
     <br />
     <br />
-    <a href="www.jptext.netlify.app">View Demo</a>
-    ·
     <a href="https://github.com/olmedoluis/jptext/issues">Report Bug</a>
     ·
     <a href="https://github.com/olmedoluis/jptext/issues">Request Feature</a>
@@ -85,7 +83,17 @@ npm install
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+1. If you have downloaded the project, run the following command, if you didn't, just go to [www.jptext.netlify.app](www.jptext.netlify.app).
+
+```sh
+npm start
+```
+
+2. Once the web site is up, click on the big dotted area to select your image with the file selector window or just drag your image into it.
+
+3. After uploading the file, it will automatically scroll down and show you status while your image is being converted.
+
+4. Wait until the process is completed and you're done! You can copy the content with the button in the middle.
 
 <!-- CONTRIBUTING -->
 
