@@ -20,7 +20,7 @@
     JPText is a web application to convert images to text
     <br />
     <br />
-    <a href="jptext.netlify.app">View Demo</a>
+    <a href="www.jptext.netlify.app">View Demo</a>
     ·
     <a href="https://github.com/olmedoluis/jptext/issues">Report Bug</a>
     ·
@@ -142,7 +142,7 @@ Project Link: [https://github.com/olmedoluis/jptext](https://github.com/olmedolu
 [issues-shield]: https://img.shields.io/github/issues/olmedoluis/repo.svg?style=flat-square
 [issues-url]: https://github.com/olmedoluis/repo/issues
 [license-shield]: https://img.shields.io/github/license/olmedoluis/repo.svg?style=flat-square
-[license-url]: https://github.com/olmedoluis/repo/blob/master/LICENSE.txt
+[license-url]: https://github.com/olmedoluis/repo/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/luisaolmedo
 [product-screenshot]: images/screenshot.png
