@@ -109,7 +109,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [@0lme2](https://twitter.com/0lme2) - olmedoluis012@gmail.com
+Luis Olmedo - olmedoluis012@gmail.com
 
 Project Link: [https://github.com/olmedoluis/jptext](https://github.com/olmedoluis/jptext)
 
