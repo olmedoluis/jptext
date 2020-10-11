@@ -36,17 +36,15 @@
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-- [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
 
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+JPText is a web application built to convert images to text that we can copy and use anywhere we want.
 
 ### Built With
 
@@ -114,14 +112,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Your Name - [@0lme2](https://twitter.com/0lme2) - olmedoluis012@gmail.com
 
 Project Link: [https://github.com/olmedoluis/jptext](https://github.com/olmedoluis/jptext)
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## Acknowledgements
-
-- []()
-- []()
-- []()
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
