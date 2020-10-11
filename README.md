@@ -9,7 +9,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/olmedoluis/jptext">
-    <img src="src/assets/images/jpt-logo.png" alt="Logo" width="80" height="80">
+    <img src="images/jpt-icon.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">JPText</h3>
