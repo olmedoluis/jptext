@@ -1,6 +1,8 @@
 .home--wrapper {
   background-image: url("https://img9.uhdpixel.com/wp/a/48/minimalist-landscape-mountains-city-b416.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .home {
