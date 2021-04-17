@@ -2,6 +2,8 @@
   color: var(--white-color);
   font-weight: 600;
   font-size: 2.5em;
+  margin: 0;
+  padding: 20px 0;
 }
 
 .header-strong {
