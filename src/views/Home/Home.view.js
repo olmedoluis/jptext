@@ -65,7 +65,7 @@ export const Home = () => {
   };
 
   return (
-    <>
+    <div className="home--wrapper">
       <Cloud alignments={{ top: 38, left: -15 }} variant="normal" />
       <Cloud alignments={{ top: 10, left: 60 }} variant="short-top" />
 
@@ -84,6 +84,6 @@ export const Home = () => {
       </div>
 
       <JPTextFooter />
-    </>
+    </div>
   );
 };
